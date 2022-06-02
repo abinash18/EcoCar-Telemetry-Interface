@@ -1,4 +1,4 @@
-# Electrical-2022-Firmware-Design
+# Electrical-Firmware-Design
 Contains the firmware designs for all vehicles
 
 **Do not merge branches to main yet, this may be done in the future**
@@ -7,8 +7,8 @@ Contains the Firmware for all vehicles.  Each Branch in this repo has its own fi
 
 ```
 cd Documents\GitHub                                                            #Change your directory where desired
-git clone https://github.com/UAlberta-EcoCar/Electrical-2022-Hardware-Design   #Clone the repo
-cd Documents\GitHub\Electrical-2022-Hardware-Design                            #Change your directory into the repo
+git clone https://github.com/UAlberta-EcoCar/Electrical-Hardware-Design        #Clone the repo
+cd Documents\GitHub\Electrical-Hardware-Design                                 #Change your directory into the repo
 git branch -r                                                                  #Displays all remote branches, choose the branch you're looking for 
 git checkout <name-of-branch>                                                  #branch that is desired (I used Relay-Board as an example).  
 ```

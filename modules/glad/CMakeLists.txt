@@ -1,0 +1,7 @@
+cmake_minimum_required(VERSION 3.6)
+add_library(glad SHARED
+    src/glad.c
+    include/glad/glad.h
+    include/KHR/khrplatform.h
+)
+target_include_directories(glad PUBLIC include)

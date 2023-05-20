@@ -39,16 +39,26 @@ if(NOT EXISTS "${PROJECT_SOURCE_DIR}/modules/imgui/CMakeLists.txt")
 endif()
 
 add_subdirectory(modules/imgui)
-include_directories(modules/imgui)
+include_directories(module/imgui)
+include_directories(modules/imgui/backends)
+
+add_subdirectory(modules/glad)
+include_directories(modules/glad/include/glad)
 
 include_directories(${PROJECT_SOURCE_DIR})
 
 add_executable(ecocar-telemetry-interface main.cpp)
 
-target_link_libraries(ecocar-telemetry-interface imgui)
-target_link_libraries(ecocar-telemetry-interface glfw)
-target_link_libraries(ecocar-telemetry-interface serial-com)
+# since we use glad we have to stop glfw from loading system gl.
+add_compile_definitions(ecocar-telemetry-interface GLFW_INCLUDE_NONE)
 
+target_link_libraries(ecocar-telemetry-interface PRIVATE glad)
+target_link_libraries(ecocar-telemetry-interface PUBLIC imgui)
+target_link_libraries(ecocar-telemetry-interface PUBLIC glfw)
+target_link_libraries(ecocar-telemetry-interface PUBLIC SERIAL_COM)
+
+# ok cmake is officially bad ass.
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
+target_compile_features(${PROJECT_NAME} PUBLIC cxx_std_17)
 include(CPack)

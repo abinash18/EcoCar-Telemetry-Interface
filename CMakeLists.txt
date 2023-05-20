@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.0.0)
+cmake_minimum_required(VERSION 3.6.0)
 project(ecocar-telemetry-interface VERSION 0.1.0 LANGUAGES C CXX)
 
 find_package(Git QUIET)
@@ -25,15 +25,27 @@ if(NOT EXISTS "${PROJECT_SOURCE_DIR}/modules/glfw/CMakeLists.txt")
 endif()
 
 add_subdirectory(modules/glfw)
+include_directories(modules/glfw/include)
 
 if(NOT EXISTS "${PROJECT_SOURCE_DIR}/modules/serial-com/CMakeLists.txt")
     message(FATAL_ERROR "Serial Com CMakeLists file not found.")
 endif()
 
 add_subdirectory(modules/serial-com)
+include_directories(modules/serial-com)
+
+if(NOT EXISTS "${PROJECT_SOURCE_DIR}/modules/imgui/CMakeLists.txt")
+    message(FATAL_ERROR "imgui CMakeLists file not found.")
+endif()
+
+add_subdirectory(modules/imgui)
+include_directories(modules/imgui)
+
+include_directories(${PROJECT_SOURCE_DIR})
 
 add_executable(ecocar-telemetry-interface main.cpp)
 
+target_link_libraries(ecocar-telemetry-interface imgui)
 target_link_libraries(ecocar-telemetry-interface glfw)
 target_link_libraries(ecocar-telemetry-interface serial-com)
 

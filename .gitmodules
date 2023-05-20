@@ -4,3 +4,8 @@
 [submodule "serial-com"]
 	path = modules/serial-com
 	url = https://github.com/abinash18/serial-com.git
+[submodule "imgui"]
+	path = modules/imgui
+	url = https://github.com/abinash18/imgui.git
+[submodule "modules/imgui"]
+	branch = master

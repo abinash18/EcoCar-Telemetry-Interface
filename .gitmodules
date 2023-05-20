@@ -1,0 +1,6 @@
+[submodule "glfw"]
+	path = modules/glfw
+	url = https://github.com/glfw/glfw.git
+[submodule "serial-com"]
+	path = modules/serial-com
+	url = https://github.com/abinash18/serial-com.git

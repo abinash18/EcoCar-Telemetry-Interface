@@ -65,7 +65,7 @@ int main(int, char **)
     // glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);            // 3.0+ only
 #endif
     // Create window with graphics context
-    //glfwWindowHint(GLFW_RESIZABLE, GLFW_FALSE);
+    // glfwWindowHint(GLFW_RESIZABLE, GLFW_FALSE);
     GLFWwindow *window = glfwCreateWindow(1280, 720, "Test Ecocar telemetry interface", nullptr, nullptr);
     if (window == nullptr)
         return 1;
@@ -73,8 +73,8 @@ int main(int, char **)
     gladLoadGLLoader((GLADloadproc)glfwGetProcAddress);
     glfwSwapInterval(1); // Enable vsync
 
-    //glfwSetWindowSizeLimits(window, 1280, 720, 1280, 720);
-    // Setup Dear ImGui context
+    // glfwSetWindowSizeLimits(window, 1280, 720, 1280, 720);
+    //  Setup Dear ImGui context
     IMGUI_CHECKVERSION();
     ImGui::CreateContext();
     ImGuiIO &io = ImGui::GetIO();

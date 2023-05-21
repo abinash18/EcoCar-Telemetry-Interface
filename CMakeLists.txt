@@ -6,7 +6,7 @@ find_package(Git QUIET)
 # https://cliutils.gitlab.io/modern-cmake/chapters/projects/submodule.html
 if(GIT_FOUND AND EXISTS "${PROJECT_SOURCE_DIR}/.git")
     # Update submodules as needed
-    option(GIT_SUBMODULE "Check submodules during build" ON)
+    option(GIT_SUBMODULE "Check submodules during build" OFF)
 
     if(GIT_SUBMODULE)
         message(STATUS "Submodule update")
@@ -56,6 +56,7 @@ target_link_libraries(ecocar-telemetry-interface PRIVATE glad)
 target_link_libraries(ecocar-telemetry-interface PUBLIC imgui)
 target_link_libraries(ecocar-telemetry-interface PUBLIC glfw)
 target_link_libraries(ecocar-telemetry-interface PUBLIC SERIAL_COM)
+target_link_libraries(ecocar-telemetry-interface PUBLIC X11)
 
 # ok cmake is officially bad ass.
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})

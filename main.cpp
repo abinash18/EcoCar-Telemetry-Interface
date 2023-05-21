@@ -5,6 +5,7 @@
 #include "imgui.h"
 #include "imgui_impl_glfw.h"
 #include "imgui_impl_opengl3.h"
+#include <X11/X.h>
 #include <iostream>
 #include <stdio.h>
 #define GL_SILENCE_DEPRECATION
@@ -64,12 +65,15 @@ int main(int, char **)
     // glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);            // 3.0+ only
 #endif
     // Create window with graphics context
-    GLFWwindow *window = glfwCreateWindow(1280, 720, "Dear ImGui GLFW+OpenGL3 example", nullptr, nullptr);
+    //glfwWindowHint(GLFW_RESIZABLE, GLFW_FALSE);
+    GLFWwindow *window = glfwCreateWindow(1280, 720, "Test Ecocar telemetry interface", nullptr, nullptr);
     if (window == nullptr)
         return 1;
     glfwMakeContextCurrent(window);
     gladLoadGLLoader((GLADloadproc)glfwGetProcAddress);
     glfwSwapInterval(1); // Enable vsync
+
+    //glfwSetWindowSizeLimits(window, 1280, 720, 1280, 720);
     // Setup Dear ImGui context
     IMGUI_CHECKVERSION();
     ImGui::CreateContext();
@@ -105,8 +109,8 @@ int main(int, char **)
 
     // Our state
     bool show_demo_window = true;
-    bool show_another_window = false;
-    ImVec4 clear_color = ImVec4(0.45f, 0.55f, 0.60f, 1.00f);
+    bool show_another_window = true;
+    ImVec4 clear_color = ImVec4(1.0f, 0.55f, 0.60f, 1.00f);
 
     // Main loop
 #ifdef __EMSCRIPTEN__
@@ -166,7 +170,6 @@ int main(int, char **)
                 show_another_window = false;
             ImGui::End();
         }
-
         // Rendering
         ImGui::Render();
         int display_w, display_h;

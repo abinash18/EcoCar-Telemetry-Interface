@@ -9,3 +9,9 @@
 	url = https://github.com/abinash18/imgui.git
 [submodule "modules/imgui"]
 	branch = master
+[submodule "toolchain/compilers/osxcross"]
+	path = toolchain/compilers/osxcross
+	url = https://github.com/tpoechtrager/osxcross.git
+[submodule "osxcross"]
+	path = modules/osxcross
+	url = https://github.com/tpoechtrager/osxcross.git

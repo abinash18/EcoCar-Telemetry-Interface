@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.6.0)
 
-set(CMAKE_TOOLCHAIN_FILE toolchain/TC_Windows.cmake)
+# set(CMAKE_TOOLCHAIN_FILE toolchain/TC_Windows.cmake)
 project(ecocar-telemetry-interface VERSION 0.1.0 LANGUAGES C CXX)
 
 find_package(Git QUIET)

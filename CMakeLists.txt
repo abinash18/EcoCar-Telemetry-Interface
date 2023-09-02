@@ -1,7 +1,6 @@
 cmake_minimum_required(VERSION 3.6.0)
 
-# set(CMAKE_TOOLCHAIN_FILE toolchain/TC_Windows.cmake)
-project(ecocar-telemetry-interface VERSION 0.1.0 LANGUAGES C CXX)
+project(telemetry-interface VERSION 0.1.0 LANGUAGES C CXX)
 
 find_package(Git QUIET)
 
@@ -26,38 +25,16 @@ if(NOT EXISTS "${PROJECT_SOURCE_DIR}/modules/glfw/CMakeLists.txt")
     message(FATAL_ERROR "GLFW CMakeLists file not found.")
 endif()
 
-add_subdirectory(modules/glfw)
-include_directories(modules/glfw/include)
-
-# if(NOT WIN32)
-# if(NOT EXISTS "${PROJECT_SOURCE_DIR}/modules/serial-com/CMakeLists.txt")
-# message(FATAL_ERROR "Serial Com CMakeLists file not found.")
-# endif()
-
-# add_subdirectory(modules/serial-com)
-# include_directories(modules/serial-com)
-# endif()
 if(NOT EXISTS "${PROJECT_SOURCE_DIR}/modules/imgui/CMakeLists.txt")
     message(FATAL_ERROR "imgui CMakeLists file not found.")
 endif()
 
-add_subdirectory(modules/imgui)
-include_directories(module/imgui)
-include_directories(modules/imgui/backends)
+file(GLOB_RECURSE SOURCES "src/*.cpp")
 
-add_subdirectory(modules/glad)
-include_directories(modules/glad/include/glad)
-
-include_directories(${PROJECT_SOURCE_DIR})
-
-add_executable(ecocar-telemetry-interface main.cpp)
-
-# since we use glad we have to stop glfw from loading system gl.
-add_compile_definitions(ecocar-telemetry-interface GLFW_INCLUDE_NONE)
-
-target_link_libraries(ecocar-telemetry-interface PRIVATE glad)
-target_link_libraries(ecocar-telemetry-interface PUBLIC imgui)
-target_link_libraries(ecocar-telemetry-interface PUBLIC glfw)
+add_executable(telemetry-interface)
+target_sources(telemetry-interface PUBLIC ${SOURCES})
+target_include_directories(telemetry-interface PUBLIC src)
+target_link_libraries(telemetry-interface PUBLIC AEngine)
 
 # target_compile_definitions(glfw PUBLIC GLFW_BUILD_WIN32)
 # if(NOT WIN32)
@@ -67,8 +44,8 @@ target_link_libraries(ecocar-telemetry-interface PUBLIC glfw)
 # target_link_libraries(ecocar-telemetry-interface PUBLIC X11)
 
 # ok cmake is officially bad ass.
-set(CPACK_PROJECT_NAME ${PROJECT_NAME})
-set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
-target_compile_features(${PROJECT_NAME} PUBLIC cxx_std_17)
-target_compile_definitions(${PROJECT_NAME} PUBLIC GLFW_BUILD_WIN32)
-include(CPack)
+# set(CPACK_PROJECT_NAME ${PROJECT_NAME})
+# set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
+# target_compile_features(${PROJECT_NAME} PUBLIC cxx_std_17)
+# target_compile_definitions(${PROJECT_NAME} PUBLIC GLFW_BUILD_WIN32)
+# include(CPack)

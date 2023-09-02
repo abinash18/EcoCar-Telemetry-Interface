@@ -1,3 +1,9 @@
 [submodule "serial-com"]
 	path = modules/serial-com
 	url = https://github.com/abinash18/serial-com.git
+[submodule "AEngine-CPP"]
+	path = AEngine-CPP
+	url = git@github.com:abinash18/AEngine-CPP.git
+[submodule "modules/AEngine"]
+	path = modules/AEngine
+	url = git@github.com:abinash18/AEngine-CPP.git

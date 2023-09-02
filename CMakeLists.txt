@@ -7,7 +7,7 @@ find_package(Git QUIET)
 # https://cliutils.gitlab.io/modern-cmake/chapters/projects/submodule.html
 if(GIT_FOUND AND EXISTS "${PROJECT_SOURCE_DIR}/.git")
     # Update submodules as needed
-    option(GIT_SUBMODULE "Check submodules during build" OFF)
+    option(GIT_SUBMODULE "Check submodules during build" ON)
 
     if(GIT_SUBMODULE)
         message(STATUS "Submodule update")
@@ -28,6 +28,8 @@ endif()
 if(NOT EXISTS "${PROJECT_SOURCE_DIR}/modules/imgui/CMakeLists.txt")
     message(FATAL_ERROR "imgui CMakeLists file not found.")
 endif()
+
+add_subdirectory(modules/AEngine-CPP)
 
 file(GLOB_RECURSE SOURCES "src/*.cpp")
 

@@ -1,4 +1,4 @@
-[submodule "serial-com"]
+[submodule "modules/serial-com"]
 	path = modules/serial-com
 	url = https://github.com/abinash18/serial-com.git
 [submodule "modules/AEngine"]

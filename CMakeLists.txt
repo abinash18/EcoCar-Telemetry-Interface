@@ -29,7 +29,7 @@ if(NOT EXISTS "${PROJECT_SOURCE_DIR}/modules/imgui/CMakeLists.txt")
     message(FATAL_ERROR "imgui CMakeLists file not found.")
 endif()
 
-add_subdirectory(modules/AEngine-CPP)
+add_subdirectory(modules/AEngine)
 
 file(GLOB_RECURSE SOURCES "src/*.cpp")
 

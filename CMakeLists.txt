@@ -21,12 +21,8 @@ if(GIT_FOUND AND EXISTS "${PROJECT_SOURCE_DIR}/.git")
     endif()
 endif()
 
-if(NOT EXISTS "${PROJECT_SOURCE_DIR}/modules/glfw/CMakeLists.txt")
-    message(FATAL_ERROR "GLFW CMakeLists file not found.")
-endif()
-
-if(NOT EXISTS "${PROJECT_SOURCE_DIR}/modules/imgui/CMakeLists.txt")
-    message(FATAL_ERROR "imgui CMakeLists file not found.")
+if(NOT EXISTS "${PROJECT_SOURCE_DIR}/modules/AEngine/CMakeLists.txt")
+    message(FATAL_ERROR "AEngine CMakeLists file not found.")
 endif()
 
 add_subdirectory(modules/AEngine)

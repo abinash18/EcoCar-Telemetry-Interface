@@ -25,6 +25,8 @@ if(NOT EXISTS "${PROJECT_SOURCE_DIR}/modules/AEngine/CMakeLists.txt")
     message(FATAL_ERROR "AEngine CMakeLists file not found.")
 endif()
 
+set(AE_COMPILE_NO_TEST ON)
+
 add_subdirectory(modules/AEngine)
 
 target_compile_definitions(AEngine PUBLIC AE_PLATFORM_WINDOWS)
@@ -35,6 +37,8 @@ add_executable(telemetry-interface)
 target_sources(telemetry-interface PUBLIC ${SOURCES})
 target_include_directories(telemetry-interface PUBLIC src)
 target_link_libraries(telemetry-interface PUBLIC AEngine)
+include_directories(modules/AEngine/AEngine/vendor/spdlog/include)
+include_directories(modules/AEngine/AEngine/vendor)
 
 # target_compile_definitions(glfw PUBLIC GLFW_BUILD_WIN32)
 # if(NOT WIN32)

@@ -1,0 +1,3 @@
+[submodule "modules/AEngine"]
+	path = modules/AEngine
+	url = git@github.com:abinash18/AEngine-CPP.git

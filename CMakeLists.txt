@@ -40,6 +40,7 @@ target_link_libraries(telemetry-interface PUBLIC AEngine)
 include_directories(modules/AEngine/AEngine/vendor/spdlog/include)
 include_directories(modules/AEngine/AEngine/vendor)
 target_compile_features(${PROJECT_NAME} PUBLIC cxx_std_20)
+set_property(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR} PROPERTY VS_STARTUP_PROJECT telemetry-interface)
 
 # target_compile_definitions(glfw PUBLIC GLFW_BUILD_WIN32)
 # if(NOT WIN32)

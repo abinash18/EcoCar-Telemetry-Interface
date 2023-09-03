@@ -27,6 +27,8 @@ endif()
 
 add_subdirectory(modules/AEngine)
 
+target_compile_definitions(AEngine PUBLIC AE_PLATFORM_WINDOWS)
+
 file(GLOB_RECURSE SOURCES "src/*.cpp")
 
 add_executable(telemetry-interface)

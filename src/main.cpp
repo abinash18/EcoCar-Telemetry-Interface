@@ -1,4 +1,5 @@
 #include <AEngine.h>
+#include "InterfaceLayer.h"
 
 #include <GLM/glm/vec3.hpp> // glm::vec3
 #include <GLM/glm/vec4.hpp> // glm::vec4
@@ -19,7 +20,7 @@ int main(int argc, char** argv) {
 	AEngine::Log::Init();
 	AE_CRITICAL("Initialized Logger");
 	auto engine = new AEngine::CoreEngine();
-	engine->addOverlay(new AEngine::ImGUILayer());
+	engine->addOverlay(new InterfaceLayer());
 	engine->start();
 	delete engine;
 	return 0;

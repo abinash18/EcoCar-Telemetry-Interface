@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.6.0)
 
 project(telemetry-interface VERSION 0.1.0 LANGUAGES C CXX)
-
+set_property(GLOBAL PROPERTY USE_FOLDERS ON)
 find_package(Git QUIET)
 
 # https://cliutils.gitlab.io/modern-cmake/chapters/projects/submodule.html
@@ -41,6 +41,9 @@ include_directories(modules/AEngine/AEngine/vendor/spdlog/include)
 include_directories(modules/AEngine/AEngine/vendor)
 target_compile_features(${PROJECT_NAME} PUBLIC cxx_std_20)
 set_property(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR} PROPERTY VS_STARTUP_PROJECT telemetry-interface)
+
+set_target_properties(AEngine PROPERTIES FOLDER "Dependencies")
+set_target_properties(IMPLOT PROPERTIES FOLDER "Dependencies")
 
 # target_compile_definitions(glfw PUBLIC GLFW_BUILD_WIN32)
 # if(NOT WIN32)

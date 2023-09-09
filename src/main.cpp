@@ -19,8 +19,10 @@ mat4 camera(float Translate, glm::vec2 const& Rotate) {
 int main(int argc, char** argv) {
 	AEngine::Log::Init();
 	AE_CRITICAL("Initialized Logger");
+	AE_CORE_DEBUG("a");
 	auto engine = new AEngine::CoreEngine();
 	engine->addOverlay(new InterfaceLayer());
+	//engine->Get();
 	engine->start();
 	delete engine;
 	return 0;

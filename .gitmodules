@@ -4,3 +4,6 @@
 [submodule "modules/serial-com"]
 	path = modules/serial-com
 	url = git@github.com:abinash18/serial-com.git
+[submodule "modules/imgui-knobs"]
+	path = modules/imgui-knobs
+	url = git@github.com:altschuler/imgui-knobs.git

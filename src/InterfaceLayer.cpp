@@ -28,7 +28,7 @@ void InterfaceLayer::attach()
 	io.ConfigFlags |= ImGuiConfigFlags_NavEnableKeyboard; // Enable Keyboard Controls
 	// io.ConfigFlags |= ImGuiConfigFlags_NavEnableGamepad;      // Enable Gamepad Controls
 	io.ConfigFlags |= ImGuiConfigFlags_DockingEnable; // Enable Docking
-	io.ConfigFlags |= ImGuiConfigFlags_ViewportsEnable; // Enable Multi-Viewport / Platform Windows
+	//io.ConfigFlags |= ImGuiConfigFlags_ViewportsEnable; // Enable Multi-Viewport / Platform Windows
 	// io.ConfigFlags |= ImGuiConfigFlags_ViewportsNoTaskBarIcons;
 	// io.ConfigFlags |= ImGuiConfigFlags_ViewportsNoMerge;
 
@@ -144,61 +144,9 @@ void InterfaceLayer::render()
 	ImGui::EndChild();
 	ImGui::SameLine();
 	ImGui::BeginChild("ChildR1", size, true);
-
-	if (ImPlot::BeginPlot("Rolling"))
-	{
-		static ScrollingBuffer sdata1, sdata2;
-		static RollingBuffer rdata1, rdata2;
-		ImVec2 mouse = ImGui::GetMousePos();
-		static float t = 0;
-		t += ImGui::GetIO().DeltaTime;
-		sdata1.AddPoint(t, mouse.x * 0.0005f);
-		rdata1.AddPoint(t, mouse.x * 0.0005f);
-		sdata2.AddPoint(t, mouse.y * 0.0005f);
-		rdata2.AddPoint(t, mouse.y * 0.0005f);
-
-		static float history = 10.0f;
-		ImGui::SliderFloat("History", &history, 1, 30, "%.1f s");
-		rdata1.Span = history;
-		rdata2.Span = history;
-		static ImPlotAxisFlags flags = ImPlotAxisFlags_NoTickLabels;
-		ImPlot::SetupAxes(nullptr, nullptr, flags, flags);
-		ImPlot::SetupAxisLimits(ImAxis_X1, 0, history, ImGuiCond_Always);
-		ImPlot::SetupAxisLimits(ImAxis_Y1, 0, 1);
-		ImPlot::PlotLine("Mouse X", &rdata1.Data[0].x, &rdata1.Data[0].y, rdata1.Data.size(), 0, 0, 2 * sizeof(float));
-		ImPlot::PlotLine("Mouse Y", &rdata2.Data[0].x, &rdata2.Data[0].y, rdata2.Data.size(), 0, 0, 2 * sizeof(float));
-		ImPlot::EndPlot();
-	}
-
 	ImGui::EndChild();
 	//ImGui::SameLine();
 	ImGui::BeginChild("ChildR2", size, true);
-	static float xs[1001], ys[1001], ys1[1001], ys2[1001], ys3[1001], ys4[1001];
-	srand(0);
-	for (int i = 0; i < 1001; ++i)
-	{
-		xs[i] = i * 0.001f;
-		ys[i] = 0.25f + 0.25f * sinf(25 * xs[i]) * sinf(5 * xs[i]) + RandomRange(-0.01f, 0.01f);
-		ys1[i] = ys[i] + RandomRange(0.1f, 0.12f);
-		ys2[i] = ys[i] - RandomRange(0.1f, 0.12f);
-		ys3[i] = 0.75f + 0.2f * sinf(25 * xs[i]);
-		ys4[i] = 0.75f + 0.1f * cosf(25 * xs[i]);
-	}
-	static float alpha = 0.25f;
-	ImGui::DragFloat("Alpha", &alpha, 0.01f, 0, 1);
-
-	if (ImPlot::BeginPlot("Shaded Plots"))
-	{
-		ImPlot::PushStyleVar(ImPlotStyleVar_FillAlpha, alpha);
-		ImPlot::PlotShaded("Uncertain Data", xs, ys1, ys2, 1001);
-		ImPlot::PlotLine("Uncertain Data", xs, ys, 1001);
-		ImPlot::PlotShaded("Overlapping", xs, ys3, ys4, 1001);
-		ImPlot::PlotLine("Overlapping", xs, ys3, 1001);
-		ImPlot::PlotLine("Overlapping", xs, ys4, 1001);
-		ImPlot::PopStyleVar();
-		ImPlot::EndPlot();
-	}
-
 	ImGui::EndChild();
 	//ImGui::End();
 	ImGui::SameLine();

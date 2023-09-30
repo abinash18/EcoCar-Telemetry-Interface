@@ -144,15 +144,73 @@ void InterfaceLayer::render()
 	ImGui::EndChild();
 	ImGui::SameLine();
 	ImGui::BeginChild("ChildR1", size, true);
+	static float value = 0;
+
+	if (ImGuiKnobs::Knob("Speed", &value, -6.0f, 6.0f, 0.1f, "%.1fdB", ImGuiKnobVariant_Wiper, 150))
+	{
+		// value was changed
+	}
 	ImGui::EndChild();
 	//ImGui::SameLine();
 	ImGui::BeginChild("ChildR2", size, true);
+	static float arr[] = { 0.6f, 0.1f, 1.0f, 0.5f, 0.92f, 0.1f, 0.2f };
+	ImGui::PlotHistogram("Histogram", arr, IM_ARRAYSIZE(arr), 0, NULL, 0.0f, 1.0f, ImVec2(0, 80.0f));
 	ImGui::EndChild();
 	//ImGui::End();
 	ImGui::SameLine();
 	ImGui::BeginChild("Knob");
-	static float value = 0;
+	//static float value = 0;
+	ImGui::TextWrapped(
+            "Below we are displaying the font texture (which is the only texture we have access to in this demo). "
+            "Use the 'ImTextureID' type as storage to pass pointers or identifier to your own texture data. "
+            "Hover the texture for a zoomed view!");
 
+        // Below we are displaying the font texture because it is the only texture we have access to inside the demo!
+        // Remember that ImTextureID is just storage for whatever you want it to be. It is essentially a value that
+        // will be passed to the rendering backend via the ImDrawCmd structure.
+        // If you use one of the default imgui_impl_XXXX.cpp rendering backend, they all have comments at the top
+        // of their respective source file to specify what they expect to be stored in ImTextureID, for example:
+        // - The imgui_impl_dx11.cpp renderer expect a 'ID3D11ShaderResourceView*' pointer
+        // - The imgui_impl_opengl3.cpp renderer expect a GLuint OpenGL texture identifier, etc.
+        // More:
+        // - If you decided that ImTextureID = MyEngineTexture*, then you can pass your MyEngineTexture* pointers
+        //   to ImGui::Image(), and gather width/height through your own functions, etc.
+        // - You can use ShowMetricsWindow() to inspect the draw data that are being passed to your renderer,
+        //   it will help you debug issues if you are confused about it.
+        // - Consider using the lower-level ImDrawList::AddImage() API, via ImGui::GetWindowDrawList()->AddImage().
+        // - Read https://github.com/ocornut/imgui/blob/master/docs/FAQ.md
+        // - Read https://github.com/ocornut/imgui/wiki/Image-Loading-and-Displaying-Examples
+        ImTextureID my_tex_id = io.Fonts->TexID;
+        float my_tex_w = (float)io.Fonts->TexWidth;
+        float my_tex_h = (float)io.Fonts->TexHeight;
+        {
+            static bool use_text_color_for_tint = false;
+            ImGui::Checkbox("Use Text Color for Tint", &use_text_color_for_tint);
+            ImGui::Text("%.0fx%.0f", my_tex_w, my_tex_h);
+            ImVec2 pos = ImGui::GetCursorScreenPos();
+            ImVec2 uv_min = ImVec2(0.0f, 0.0f);                 // Top-left
+            ImVec2 uv_max = ImVec2(1.0f, 1.0f);                 // Lower-right
+            ImVec4 tint_col = use_text_color_for_tint ? ImGui::GetStyleColorVec4(ImGuiCol_Text) : ImVec4(1.0f, 1.0f, 1.0f, 1.0f);   // No tint
+            ImVec4 border_col = ImGui::GetStyleColorVec4(ImGuiCol_Border);
+            ImGui::Image(my_tex_id, ImVec2(my_tex_w, my_tex_h), uv_min, uv_max, tint_col, border_col);
+            if (ImGui::IsItemHovered() && ImGui::BeginTooltip())
+            {
+                float region_sz = 32.0f;
+                float region_x = io.MousePos.x - pos.x - region_sz * 0.5f;
+                float region_y = io.MousePos.y - pos.y - region_sz * 0.5f;
+                float zoom = 4.0f;
+                if (region_x < 0.0f) { region_x = 0.0f; }
+                else if (region_x > my_tex_w - region_sz) { region_x = my_tex_w - region_sz; }
+                if (region_y < 0.0f) { region_y = 0.0f; }
+                else if (region_y > my_tex_h - region_sz) { region_y = my_tex_h - region_sz; }
+                ImGui::Text("Min: (%.2f, %.2f)", region_x, region_y);
+                ImGui::Text("Max: (%.2f, %.2f)", region_x + region_sz, region_y + region_sz);
+                ImVec2 uv0 = ImVec2((region_x) / my_tex_w, (region_y) / my_tex_h);
+                ImVec2 uv1 = ImVec2((region_x + region_sz) / my_tex_w, (region_y + region_sz) / my_tex_h);
+                ImGui::Image(my_tex_id, ImVec2(region_sz * zoom, region_sz * zoom), uv0, uv1, tint_col, border_col);
+                ImGui::EndTooltip();
+            }
+		}
 	if (ImGuiKnobs::Knob("Speed", &value, -6.0f, 6.0f, 0.1f, "%.1fdB", ImGuiKnobVariant_Wiper, 150))
 	{
 		// value was changed

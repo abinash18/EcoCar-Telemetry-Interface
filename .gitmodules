@@ -1,9 +1,9 @@
 [submodule "modules/AEngine"]
 	path = modules/AEngine
-	url = git@github.com:abinash18/AEngine-CPP.git
+	url = https://github.com/abinash18/AEngine-CPP.git
 [submodule "modules/serial-com"]
 	path = modules/serial-com
-	url = git@github.com:abinash18/serial-com.git
+	url = https://github.com/abinash18/serial-com.git
 [submodule "modules/imgui-knobs"]
 	path = modules/imgui-knobs
-	url = git@github.com:altschuler/imgui-knobs.git
+	url = https://github.com/abinash18/imgui-knobs.git

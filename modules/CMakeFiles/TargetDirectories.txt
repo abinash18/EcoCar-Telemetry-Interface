@@ -1,0 +1,9 @@
+C:/Users/mrmoo/source/repos/EcoCar-Telemetry-Interface/modules/CMakeFiles/IMGUI-KNOBS.dir
+C:/Users/mrmoo/source/repos/EcoCar-Telemetry-Interface/modules/CMakeFiles/telemetry-interface.dir
+C:/Users/mrmoo/source/repos/EcoCar-Telemetry-Interface/modules/CMakeFiles/ALL_BUILD.dir
+C:/Users/mrmoo/source/repos/EcoCar-Telemetry-Interface/modules/CMakeFiles/ZERO_CHECK.dir
+C:/Users/mrmoo/source/repos/EcoCar-Telemetry-Interface/modules/modules/AEngine/CMakeFiles/AEngine.dir
+C:/Users/mrmoo/source/repos/EcoCar-Telemetry-Interface/modules/modules/AEngine/AEngine/vendor/GLFW/src/CMakeFiles/GLFW.dir
+C:/Users/mrmoo/source/repos/EcoCar-Telemetry-Interface/modules/modules/AEngine/AEngine/vendor/IMGUI/CMakeFiles/IMGUI.dir
+C:/Users/mrmoo/source/repos/EcoCar-Telemetry-Interface/modules/modules/AEngine/AEngine/vendor/GLAD/CMakeFiles/GLAD.dir
+C:/Users/mrmoo/source/repos/EcoCar-Telemetry-Interface/modules/modules/AEngine/AEngine/vendor/IMPLOT/CMakeFiles/IMPLOT.dir

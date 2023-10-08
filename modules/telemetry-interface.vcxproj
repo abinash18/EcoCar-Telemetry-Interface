@@ -1,0 +1,409 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{B8C051E6-AB24-3D48-8B9B-84ACA96EDE80}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.22621.0</WindowsTargetPlatformVersion>
+    <Platform>x64</Platform>
+    <ProjectName>telemetry-interface</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\mrmoo\source\repos\EcoCar-Telemetry-Interface\modules\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">telemetry-interface.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">telemetry-interface</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\mrmoo\source\repos\EcoCar-Telemetry-Interface\modules\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">telemetry-interface.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">telemetry-interface</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\mrmoo\source\repos\EcoCar-Telemetry-Interface\modules\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">telemetry-interface.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">telemetry-interface</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\mrmoo\source\repos\EcoCar-Telemetry-Interface\modules\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">telemetry-interface.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">telemetry-interface</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\mrmoo\source\repos\EcoCar-Telemetry-Interface\modules\imgui-knobs;C:\Users\mrmoo\source\repos\EcoCar-Telemetry-Interface\src;C:\Users\mrmoo\source\repos\EcoCar-Telemetry-Interface\modules\AEngine\AEngine\vendor\spdlog\include;C:\Users\mrmoo\source\repos\EcoCar-Telemetry-Interface\modules\AEngine\AEngine\vendor;C:\Users\mrmoo\source\repos\EcoCar-Telemetry-Interface\modules\AEngine\AEngine\src;C:\Users\mrmoo\source\repos\EcoCar-Telemetry-Interface\modules\AEngine\AEngine\vendor\GLAD\include;C:\Users\mrmoo\source\repos\EcoCar-Telemetry-Interface\modules\AEngine\AEngine\vendor\IMGUI\backends;C:\Users\mrmoo\source\repos\EcoCar-Telemetry-Interface\modules\AEngine\AEngine\vendor\IMGUI;\include;C:\Users\mrmoo\source\repos\EcoCar-Telemetry-Interface;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>C:/Users/mrmoo/source/repos/EcoCar-Telemetry-Interface/modules/CMakeFiles/telemetry-interface.dir/Debug/cmake_pch.hxx</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>C:/Users/mrmoo/source/repos/EcoCar-Telemetry-Interface/modules/telemetry-interface.dir/Debug/cmake_pch.pch</PrecompiledHeaderOutputFile>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;AE_PLATFORM_WINDOWS;CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;AE_PLATFORM_WINDOWS;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\mrmoo\source\repos\EcoCar-Telemetry-Interface\modules\imgui-knobs;C:\Users\mrmoo\source\repos\EcoCar-Telemetry-Interface\src;C:\Users\mrmoo\source\repos\EcoCar-Telemetry-Interface\modules\AEngine\AEngine\vendor\spdlog\include;C:\Users\mrmoo\source\repos\EcoCar-Telemetry-Interface\modules\AEngine\AEngine\vendor;C:\Users\mrmoo\source\repos\EcoCar-Telemetry-Interface\modules\AEngine\AEngine\src;C:\Users\mrmoo\source\repos\EcoCar-Telemetry-Interface\modules\AEngine\AEngine\vendor\GLAD\include;C:\Users\mrmoo\source\repos\EcoCar-Telemetry-Interface\modules\AEngine\AEngine\vendor\IMGUI\backends;C:\Users\mrmoo\source\repos\EcoCar-Telemetry-Interface\modules\AEngine\AEngine\vendor\IMGUI;\include;C:\Users\mrmoo\source\repos\EcoCar-Telemetry-Interface;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\mrmoo\source\repos\EcoCar-Telemetry-Interface\modules\imgui-knobs;C:\Users\mrmoo\source\repos\EcoCar-Telemetry-Interface\src;C:\Users\mrmoo\source\repos\EcoCar-Telemetry-Interface\modules\AEngine\AEngine\vendor\spdlog\include;C:\Users\mrmoo\source\repos\EcoCar-Telemetry-Interface\modules\AEngine\AEngine\vendor;C:\Users\mrmoo\source\repos\EcoCar-Telemetry-Interface\modules\AEngine\AEngine\src;C:\Users\mrmoo\source\repos\EcoCar-Telemetry-Interface\modules\AEngine\AEngine\vendor\GLAD\include;C:\Users\mrmoo\source\repos\EcoCar-Telemetry-Interface\modules\AEngine\AEngine\vendor\IMGUI\backends;C:\Users\mrmoo\source\repos\EcoCar-Telemetry-Interface\modules\AEngine\AEngine\vendor\IMGUI;\include;C:\Users\mrmoo\source\repos\EcoCar-Telemetry-Interface;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>modules\AEngine\Debug\AEngine.lib;Debug\IMGUI-KNOBS.lib;modules\AEngine\AEngine\vendor\GLAD\Debug\GLAD.lib;modules\AEngine\AEngine\vendor\GLFW\src\Debug\GLFW.lib;modules\AEngine\AEngine\vendor\IMPLOT\Debug\IMPLOT.lib;modules\AEngine\AEngine\vendor\IMGUI\Debug\IMGUI.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/mrmoo/source/repos/EcoCar-Telemetry-Interface/modules/Debug/telemetry-interface.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/mrmoo/source/repos/EcoCar-Telemetry-Interface/modules/Debug/telemetry-interface.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\mrmoo\source\repos\EcoCar-Telemetry-Interface\modules\imgui-knobs;C:\Users\mrmoo\source\repos\EcoCar-Telemetry-Interface\src;C:\Users\mrmoo\source\repos\EcoCar-Telemetry-Interface\modules\AEngine\AEngine\vendor\spdlog\include;C:\Users\mrmoo\source\repos\EcoCar-Telemetry-Interface\modules\AEngine\AEngine\vendor;C:\Users\mrmoo\source\repos\EcoCar-Telemetry-Interface\modules\AEngine\AEngine\src;C:\Users\mrmoo\source\repos\EcoCar-Telemetry-Interface\modules\AEngine\AEngine\vendor\GLAD\include;C:\Users\mrmoo\source\repos\EcoCar-Telemetry-Interface\modules\AEngine\AEngine\vendor\IMGUI\backends;C:\Users\mrmoo\source\repos\EcoCar-Telemetry-Interface\modules\AEngine\AEngine\vendor\IMGUI;\include;C:\Users\mrmoo\source\repos\EcoCar-Telemetry-Interface;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>C:/Users/mrmoo/source/repos/EcoCar-Telemetry-Interface/modules/CMakeFiles/telemetry-interface.dir/Release/cmake_pch.hxx</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>C:/Users/mrmoo/source/repos/EcoCar-Telemetry-Interface/modules/telemetry-interface.dir/Release/cmake_pch.pch</PrecompiledHeaderOutputFile>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;AE_PLATFORM_WINDOWS;CMAKE_INTDIR="Release"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;AE_PLATFORM_WINDOWS;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\mrmoo\source\repos\EcoCar-Telemetry-Interface\modules\imgui-knobs;C:\Users\mrmoo\source\repos\EcoCar-Telemetry-Interface\src;C:\Users\mrmoo\source\repos\EcoCar-Telemetry-Interface\modules\AEngine\AEngine\vendor\spdlog\include;C:\Users\mrmoo\source\repos\EcoCar-Telemetry-Interface\modules\AEngine\AEngine\vendor;C:\Users\mrmoo\source\repos\EcoCar-Telemetry-Interface\modules\AEngine\AEngine\src;C:\Users\mrmoo\source\repos\EcoCar-Telemetry-Interface\modules\AEngine\AEngine\vendor\GLAD\include;C:\Users\mrmoo\source\repos\EcoCar-Telemetry-Interface\modules\AEngine\AEngine\vendor\IMGUI\backends;C:\Users\mrmoo\source\repos\EcoCar-Telemetry-Interface\modules\AEngine\AEngine\vendor\IMGUI;\include;C:\Users\mrmoo\source\repos\EcoCar-Telemetry-Interface;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\mrmoo\source\repos\EcoCar-Telemetry-Interface\modules\imgui-knobs;C:\Users\mrmoo\source\repos\EcoCar-Telemetry-Interface\src;C:\Users\mrmoo\source\repos\EcoCar-Telemetry-Interface\modules\AEngine\AEngine\vendor\spdlog\include;C:\Users\mrmoo\source\repos\EcoCar-Telemetry-Interface\modules\AEngine\AEngine\vendor;C:\Users\mrmoo\source\repos\EcoCar-Telemetry-Interface\modules\AEngine\AEngine\src;C:\Users\mrmoo\source\repos\EcoCar-Telemetry-Interface\modules\AEngine\AEngine\vendor\GLAD\include;C:\Users\mrmoo\source\repos\EcoCar-Telemetry-Interface\modules\AEngine\AEngine\vendor\IMGUI\backends;C:\Users\mrmoo\source\repos\EcoCar-Telemetry-Interface\modules\AEngine\AEngine\vendor\IMGUI;\include;C:\Users\mrmoo\source\repos\EcoCar-Telemetry-Interface;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>modules\AEngine\Release\AEngine.lib;Release\IMGUI-KNOBS.lib;modules\AEngine\AEngine\vendor\GLAD\Release\GLAD.lib;modules\AEngine\AEngine\vendor\GLFW\src\Release\GLFW.lib;modules\AEngine\AEngine\vendor\IMPLOT\Release\IMPLOT.lib;modules\AEngine\AEngine\vendor\IMGUI\Release\IMGUI.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/mrmoo/source/repos/EcoCar-Telemetry-Interface/modules/Release/telemetry-interface.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/mrmoo/source/repos/EcoCar-Telemetry-Interface/modules/Release/telemetry-interface.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\mrmoo\source\repos\EcoCar-Telemetry-Interface\modules\imgui-knobs;C:\Users\mrmoo\source\repos\EcoCar-Telemetry-Interface\src;C:\Users\mrmoo\source\repos\EcoCar-Telemetry-Interface\modules\AEngine\AEngine\vendor\spdlog\include;C:\Users\mrmoo\source\repos\EcoCar-Telemetry-Interface\modules\AEngine\AEngine\vendor;C:\Users\mrmoo\source\repos\EcoCar-Telemetry-Interface\modules\AEngine\AEngine\src;C:\Users\mrmoo\source\repos\EcoCar-Telemetry-Interface\modules\AEngine\AEngine\vendor\GLAD\include;C:\Users\mrmoo\source\repos\EcoCar-Telemetry-Interface\modules\AEngine\AEngine\vendor\IMGUI\backends;C:\Users\mrmoo\source\repos\EcoCar-Telemetry-Interface\modules\AEngine\AEngine\vendor\IMGUI;\include;C:\Users\mrmoo\source\repos\EcoCar-Telemetry-Interface;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>C:/Users/mrmoo/source/repos/EcoCar-Telemetry-Interface/modules/CMakeFiles/telemetry-interface.dir/MinSizeRel/cmake_pch.hxx</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>C:/Users/mrmoo/source/repos/EcoCar-Telemetry-Interface/modules/telemetry-interface.dir/MinSizeRel/cmake_pch.pch</PrecompiledHeaderOutputFile>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;AE_PLATFORM_WINDOWS;CMAKE_INTDIR="MinSizeRel"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;AE_PLATFORM_WINDOWS;CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\mrmoo\source\repos\EcoCar-Telemetry-Interface\modules\imgui-knobs;C:\Users\mrmoo\source\repos\EcoCar-Telemetry-Interface\src;C:\Users\mrmoo\source\repos\EcoCar-Telemetry-Interface\modules\AEngine\AEngine\vendor\spdlog\include;C:\Users\mrmoo\source\repos\EcoCar-Telemetry-Interface\modules\AEngine\AEngine\vendor;C:\Users\mrmoo\source\repos\EcoCar-Telemetry-Interface\modules\AEngine\AEngine\src;C:\Users\mrmoo\source\repos\EcoCar-Telemetry-Interface\modules\AEngine\AEngine\vendor\GLAD\include;C:\Users\mrmoo\source\repos\EcoCar-Telemetry-Interface\modules\AEngine\AEngine\vendor\IMGUI\backends;C:\Users\mrmoo\source\repos\EcoCar-Telemetry-Interface\modules\AEngine\AEngine\vendor\IMGUI;\include;C:\Users\mrmoo\source\repos\EcoCar-Telemetry-Interface;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\mrmoo\source\repos\EcoCar-Telemetry-Interface\modules\imgui-knobs;C:\Users\mrmoo\source\repos\EcoCar-Telemetry-Interface\src;C:\Users\mrmoo\source\repos\EcoCar-Telemetry-Interface\modules\AEngine\AEngine\vendor\spdlog\include;C:\Users\mrmoo\source\repos\EcoCar-Telemetry-Interface\modules\AEngine\AEngine\vendor;C:\Users\mrmoo\source\repos\EcoCar-Telemetry-Interface\modules\AEngine\AEngine\src;C:\Users\mrmoo\source\repos\EcoCar-Telemetry-Interface\modules\AEngine\AEngine\vendor\GLAD\include;C:\Users\mrmoo\source\repos\EcoCar-Telemetry-Interface\modules\AEngine\AEngine\vendor\IMGUI\backends;C:\Users\mrmoo\source\repos\EcoCar-Telemetry-Interface\modules\AEngine\AEngine\vendor\IMGUI;\include;C:\Users\mrmoo\source\repos\EcoCar-Telemetry-Interface;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>modules\AEngine\MinSizeRel\AEngine.lib;MinSizeRel\IMGUI-KNOBS.lib;modules\AEngine\AEngine\vendor\GLAD\MinSizeRel\GLAD.lib;modules\AEngine\AEngine\vendor\GLFW\src\MinSizeRel\GLFW.lib;modules\AEngine\AEngine\vendor\IMPLOT\MinSizeRel\IMPLOT.lib;modules\AEngine\AEngine\vendor\IMGUI\MinSizeRel\IMGUI.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/mrmoo/source/repos/EcoCar-Telemetry-Interface/modules/MinSizeRel/telemetry-interface.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/mrmoo/source/repos/EcoCar-Telemetry-Interface/modules/MinSizeRel/telemetry-interface.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\mrmoo\source\repos\EcoCar-Telemetry-Interface\modules\imgui-knobs;C:\Users\mrmoo\source\repos\EcoCar-Telemetry-Interface\src;C:\Users\mrmoo\source\repos\EcoCar-Telemetry-Interface\modules\AEngine\AEngine\vendor\spdlog\include;C:\Users\mrmoo\source\repos\EcoCar-Telemetry-Interface\modules\AEngine\AEngine\vendor;C:\Users\mrmoo\source\repos\EcoCar-Telemetry-Interface\modules\AEngine\AEngine\src;C:\Users\mrmoo\source\repos\EcoCar-Telemetry-Interface\modules\AEngine\AEngine\vendor\GLAD\include;C:\Users\mrmoo\source\repos\EcoCar-Telemetry-Interface\modules\AEngine\AEngine\vendor\IMGUI\backends;C:\Users\mrmoo\source\repos\EcoCar-Telemetry-Interface\modules\AEngine\AEngine\vendor\IMGUI;\include;C:\Users\mrmoo\source\repos\EcoCar-Telemetry-Interface;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>C:/Users/mrmoo/source/repos/EcoCar-Telemetry-Interface/modules/CMakeFiles/telemetry-interface.dir/RelWithDebInfo/cmake_pch.hxx</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>C:/Users/mrmoo/source/repos/EcoCar-Telemetry-Interface/modules/telemetry-interface.dir/RelWithDebInfo/cmake_pch.pch</PrecompiledHeaderOutputFile>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;AE_PLATFORM_WINDOWS;CMAKE_INTDIR="RelWithDebInfo"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;AE_PLATFORM_WINDOWS;CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\mrmoo\source\repos\EcoCar-Telemetry-Interface\modules\imgui-knobs;C:\Users\mrmoo\source\repos\EcoCar-Telemetry-Interface\src;C:\Users\mrmoo\source\repos\EcoCar-Telemetry-Interface\modules\AEngine\AEngine\vendor\spdlog\include;C:\Users\mrmoo\source\repos\EcoCar-Telemetry-Interface\modules\AEngine\AEngine\vendor;C:\Users\mrmoo\source\repos\EcoCar-Telemetry-Interface\modules\AEngine\AEngine\src;C:\Users\mrmoo\source\repos\EcoCar-Telemetry-Interface\modules\AEngine\AEngine\vendor\GLAD\include;C:\Users\mrmoo\source\repos\EcoCar-Telemetry-Interface\modules\AEngine\AEngine\vendor\IMGUI\backends;C:\Users\mrmoo\source\repos\EcoCar-Telemetry-Interface\modules\AEngine\AEngine\vendor\IMGUI;\include;C:\Users\mrmoo\source\repos\EcoCar-Telemetry-Interface;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\mrmoo\source\repos\EcoCar-Telemetry-Interface\modules\imgui-knobs;C:\Users\mrmoo\source\repos\EcoCar-Telemetry-Interface\src;C:\Users\mrmoo\source\repos\EcoCar-Telemetry-Interface\modules\AEngine\AEngine\vendor\spdlog\include;C:\Users\mrmoo\source\repos\EcoCar-Telemetry-Interface\modules\AEngine\AEngine\vendor;C:\Users\mrmoo\source\repos\EcoCar-Telemetry-Interface\modules\AEngine\AEngine\src;C:\Users\mrmoo\source\repos\EcoCar-Telemetry-Interface\modules\AEngine\AEngine\vendor\GLAD\include;C:\Users\mrmoo\source\repos\EcoCar-Telemetry-Interface\modules\AEngine\AEngine\vendor\IMGUI\backends;C:\Users\mrmoo\source\repos\EcoCar-Telemetry-Interface\modules\AEngine\AEngine\vendor\IMGUI;\include;C:\Users\mrmoo\source\repos\EcoCar-Telemetry-Interface;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>modules\AEngine\RelWithDebInfo\AEngine.lib;RelWithDebInfo\IMGUI-KNOBS.lib;modules\AEngine\AEngine\vendor\GLAD\RelWithDebInfo\GLAD.lib;modules\AEngine\AEngine\vendor\GLFW\src\RelWithDebInfo\GLFW.lib;modules\AEngine\AEngine\vendor\IMPLOT\RelWithDebInfo\IMPLOT.lib;modules\AEngine\AEngine\vendor\IMGUI\RelWithDebInfo\IMGUI.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/mrmoo/source/repos/EcoCar-Telemetry-Interface/modules/RelWithDebInfo/telemetry-interface.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/mrmoo/source/repos/EcoCar-Telemetry-Interface/modules/RelWithDebInfo/telemetry-interface.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\mrmoo\source\repos\EcoCar-Telemetry-Interface\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Users/mrmoo/source/repos/EcoCar-Telemetry-Interface/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/mrmoo/source/repos/EcoCar-Telemetry-Interface -BC:/Users/mrmoo/source/repos/EcoCar-Telemetry-Interface/modules --check-stamp-file C:/Users/mrmoo/source/repos/EcoCar-Telemetry-Interface/modules/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeCCompiler.cmake.in;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeCCompilerABI.c;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeCXXCompiler.cmake.in;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeCXXCompilerABI.cpp;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeCompilerIdDetection.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeDetermineCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeDetermineCXXCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeDetermineCompileFeatures.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeDetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeDetermineCompilerABI.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeDetermineCompilerId.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeDetermineRCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeDetermineSystem.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeFindBinUtils.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeParseImplicitIncludeInfo.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeParseImplicitLinkInfo.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeParseLibraryArchitecture.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeRCCompiler.cmake.in;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeSystem.cmake.in;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeTestCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeTestCXXCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeTestCompilerCommon.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeTestRCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\ADSP-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\ARMCC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\ARMClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\AppleClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\Borland-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\Bruce-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\Clang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\Comeau-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\Compaq-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\Compaq-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\Cray-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\Embarcadero-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\Fujitsu-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\FujitsuClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\GHS-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\GNU-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\GNU-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\HP-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\HP-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\IAR-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\IBMCPP-C-DetermineVersionInternal.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\IBMClang-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\IBMClang-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\Intel-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\IntelLLVM-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\LCC-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\LCC-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\MSVC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\MSVC.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\NVHPC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\NVIDIA-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\OpenWatcom-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\PGI-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\PathScale-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\SCO-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\SDCC-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\SunPro-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\SunPro-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\TI-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\Tasking-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\TinyCC-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\VisualAge-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\VisualAge-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\Watcom-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\XL-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\XL-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\XLClang-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\XLClang-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\zOS-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\zOS-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CompilerId\VS-10.vcxproj.in;C:\Program Files\CMake\share\cmake-3.27\Modules\FindGit.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Internal\FeatureTesting.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Platform\Windows-Determine-CXX.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Platform\Windows-Initialize.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Platform\WindowsPaths.cmake;C:\Users\mrmoo\source\repos\EcoCar-Telemetry-Interface\imgui-knobs.cmake;C:\Users\mrmoo\source\repos\EcoCar-Telemetry-Interface\modules\CMakeFiles\3.27.6\CMakeCCompiler.cmake;C:\Users\mrmoo\source\repos\EcoCar-Telemetry-Interface\modules\CMakeFiles\3.27.6\CMakeCXXCompiler.cmake;C:\Users\mrmoo\source\repos\EcoCar-Telemetry-Interface\modules\CMakeFiles\3.27.6\CMakeRCCompiler.cmake;C:\Users\mrmoo\source\repos\EcoCar-Telemetry-Interface\modules\CMakeFiles\3.27.6\CMakeSystem.cmake;C:\Users\mrmoo\source\repos\EcoCar-Telemetry-Interface\modules\CMakeFiles\cmake.verify_globs;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\mrmoo\source\repos\EcoCar-Telemetry-Interface\modules\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Users/mrmoo/source/repos/EcoCar-Telemetry-Interface/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/mrmoo/source/repos/EcoCar-Telemetry-Interface -BC:/Users/mrmoo/source/repos/EcoCar-Telemetry-Interface/modules --check-stamp-file C:/Users/mrmoo/source/repos/EcoCar-Telemetry-Interface/modules/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeCCompiler.cmake.in;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeCCompilerABI.c;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeCXXCompiler.cmake.in;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeCXXCompilerABI.cpp;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeCompilerIdDetection.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeDetermineCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeDetermineCXXCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeDetermineCompileFeatures.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeDetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeDetermineCompilerABI.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeDetermineCompilerId.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeDetermineRCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeDetermineSystem.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeFindBinUtils.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeParseImplicitIncludeInfo.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeParseImplicitLinkInfo.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeParseLibraryArchitecture.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeRCCompiler.cmake.in;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeSystem.cmake.in;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeTestCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeTestCXXCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeTestCompilerCommon.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeTestRCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\ADSP-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\ARMCC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\ARMClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\AppleClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\Borland-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\Bruce-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\Clang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\Comeau-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\Compaq-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\Compaq-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\Cray-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\Embarcadero-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\Fujitsu-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\FujitsuClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\GHS-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\GNU-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\GNU-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\HP-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\HP-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\IAR-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\IBMCPP-C-DetermineVersionInternal.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\IBMClang-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\IBMClang-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\Intel-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\IntelLLVM-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\LCC-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\LCC-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\MSVC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\MSVC.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\NVHPC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\NVIDIA-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\OpenWatcom-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\PGI-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\PathScale-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\SCO-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\SDCC-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\SunPro-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\SunPro-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\TI-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\Tasking-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\TinyCC-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\VisualAge-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\VisualAge-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\Watcom-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\XL-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\XL-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\XLClang-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\XLClang-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\zOS-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\zOS-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CompilerId\VS-10.vcxproj.in;C:\Program Files\CMake\share\cmake-3.27\Modules\FindGit.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Internal\FeatureTesting.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Platform\Windows-Determine-CXX.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Platform\Windows-Initialize.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Platform\WindowsPaths.cmake;C:\Users\mrmoo\source\repos\EcoCar-Telemetry-Interface\imgui-knobs.cmake;C:\Users\mrmoo\source\repos\EcoCar-Telemetry-Interface\modules\CMakeFiles\3.27.6\CMakeCCompiler.cmake;C:\Users\mrmoo\source\repos\EcoCar-Telemetry-Interface\modules\CMakeFiles\3.27.6\CMakeCXXCompiler.cmake;C:\Users\mrmoo\source\repos\EcoCar-Telemetry-Interface\modules\CMakeFiles\3.27.6\CMakeRCCompiler.cmake;C:\Users\mrmoo\source\repos\EcoCar-Telemetry-Interface\modules\CMakeFiles\3.27.6\CMakeSystem.cmake;C:\Users\mrmoo\source\repos\EcoCar-Telemetry-Interface\modules\CMakeFiles\cmake.verify_globs;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\mrmoo\source\repos\EcoCar-Telemetry-Interface\modules\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/Users/mrmoo/source/repos/EcoCar-Telemetry-Interface/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/mrmoo/source/repos/EcoCar-Telemetry-Interface -BC:/Users/mrmoo/source/repos/EcoCar-Telemetry-Interface/modules --check-stamp-file C:/Users/mrmoo/source/repos/EcoCar-Telemetry-Interface/modules/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeCCompiler.cmake.in;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeCCompilerABI.c;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeCXXCompiler.cmake.in;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeCXXCompilerABI.cpp;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeCompilerIdDetection.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeDetermineCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeDetermineCXXCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeDetermineCompileFeatures.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeDetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeDetermineCompilerABI.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeDetermineCompilerId.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeDetermineRCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeDetermineSystem.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeFindBinUtils.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeParseImplicitIncludeInfo.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeParseImplicitLinkInfo.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeParseLibraryArchitecture.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeRCCompiler.cmake.in;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeSystem.cmake.in;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeTestCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeTestCXXCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeTestCompilerCommon.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeTestRCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\ADSP-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\ARMCC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\ARMClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\AppleClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\Borland-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\Bruce-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\Clang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\Comeau-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\Compaq-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\Compaq-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\Cray-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\Embarcadero-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\Fujitsu-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\FujitsuClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\GHS-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\GNU-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\GNU-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\HP-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\HP-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\IAR-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\IBMCPP-C-DetermineVersionInternal.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\IBMClang-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\IBMClang-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\Intel-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\IntelLLVM-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\LCC-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\LCC-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\MSVC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\MSVC.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\NVHPC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\NVIDIA-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\OpenWatcom-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\PGI-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\PathScale-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\SCO-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\SDCC-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\SunPro-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\SunPro-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\TI-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\Tasking-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\TinyCC-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\VisualAge-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\VisualAge-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\Watcom-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\XL-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\XL-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\XLClang-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\XLClang-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\zOS-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\zOS-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CompilerId\VS-10.vcxproj.in;C:\Program Files\CMake\share\cmake-3.27\Modules\FindGit.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Internal\FeatureTesting.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Platform\Windows-Determine-CXX.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Platform\Windows-Initialize.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Platform\WindowsPaths.cmake;C:\Users\mrmoo\source\repos\EcoCar-Telemetry-Interface\imgui-knobs.cmake;C:\Users\mrmoo\source\repos\EcoCar-Telemetry-Interface\modules\CMakeFiles\3.27.6\CMakeCCompiler.cmake;C:\Users\mrmoo\source\repos\EcoCar-Telemetry-Interface\modules\CMakeFiles\3.27.6\CMakeCXXCompiler.cmake;C:\Users\mrmoo\source\repos\EcoCar-Telemetry-Interface\modules\CMakeFiles\3.27.6\CMakeRCCompiler.cmake;C:\Users\mrmoo\source\repos\EcoCar-Telemetry-Interface\modules\CMakeFiles\3.27.6\CMakeSystem.cmake;C:\Users\mrmoo\source\repos\EcoCar-Telemetry-Interface\modules\CMakeFiles\cmake.verify_globs;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\mrmoo\source\repos\EcoCar-Telemetry-Interface\modules\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/Users/mrmoo/source/repos/EcoCar-Telemetry-Interface/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/mrmoo/source/repos/EcoCar-Telemetry-Interface -BC:/Users/mrmoo/source/repos/EcoCar-Telemetry-Interface/modules --check-stamp-file C:/Users/mrmoo/source/repos/EcoCar-Telemetry-Interface/modules/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeCCompiler.cmake.in;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeCCompilerABI.c;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeCXXCompiler.cmake.in;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeCXXCompilerABI.cpp;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeCompilerIdDetection.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeDetermineCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeDetermineCXXCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeDetermineCompileFeatures.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeDetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeDetermineCompilerABI.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeDetermineCompilerId.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeDetermineRCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeDetermineSystem.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeFindBinUtils.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeParseImplicitIncludeInfo.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeParseImplicitLinkInfo.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeParseLibraryArchitecture.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeRCCompiler.cmake.in;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeSystem.cmake.in;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeTestCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeTestCXXCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeTestCompilerCommon.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeTestRCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\ADSP-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\ARMCC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\ARMClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\AppleClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\Borland-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\Bruce-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\Clang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\Comeau-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\Compaq-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\Compaq-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\Cray-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\Embarcadero-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\Fujitsu-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\FujitsuClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\GHS-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\GNU-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\GNU-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\HP-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\HP-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\IAR-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\IBMCPP-C-DetermineVersionInternal.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\IBMClang-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\IBMClang-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\Intel-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\IntelLLVM-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\LCC-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\LCC-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\MSVC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\MSVC.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\NVHPC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\NVIDIA-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\OpenWatcom-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\PGI-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\PathScale-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\SCO-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\SDCC-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\SunPro-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\SunPro-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\TI-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\Tasking-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\TinyCC-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\VisualAge-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\VisualAge-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\Watcom-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\XL-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\XL-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\XLClang-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\XLClang-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\zOS-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Compiler\zOS-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CompilerId\VS-10.vcxproj.in;C:\Program Files\CMake\share\cmake-3.27\Modules\FindGit.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Internal\FeatureTesting.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Platform\Windows-Determine-CXX.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Platform\Windows-Initialize.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Platform\WindowsPaths.cmake;C:\Users\mrmoo\source\repos\EcoCar-Telemetry-Interface\imgui-knobs.cmake;C:\Users\mrmoo\source\repos\EcoCar-Telemetry-Interface\modules\CMakeFiles\3.27.6\CMakeCCompiler.cmake;C:\Users\mrmoo\source\repos\EcoCar-Telemetry-Interface\modules\CMakeFiles\3.27.6\CMakeCXXCompiler.cmake;C:\Users\mrmoo\source\repos\EcoCar-Telemetry-Interface\modules\CMakeFiles\3.27.6\CMakeRCCompiler.cmake;C:\Users\mrmoo\source\repos\EcoCar-Telemetry-Interface\modules\CMakeFiles\3.27.6\CMakeSystem.cmake;C:\Users\mrmoo\source\repos\EcoCar-Telemetry-Interface\modules\CMakeFiles\cmake.verify_globs;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\mrmoo\source\repos\EcoCar-Telemetry-Interface\modules\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="C:\Users\mrmoo\source\repos\EcoCar-Telemetry-Interface\modules\CMakeFiles\telemetry-interface.dir\cmake_pch.cxx">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/mrmoo/source/repos/EcoCar-Telemetry-Interface/modules/CMakeFiles/telemetry-interface.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/mrmoo/source/repos/EcoCar-Telemetry-Interface/modules/CMakeFiles/telemetry-interface.dir/Debug/cmake_pch.hxx</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/mrmoo/source/repos/EcoCar-Telemetry-Interface/modules/telemetry-interface.dir/Debug/cmake_pch.pch</PrecompiledHeaderOutputFile>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/mrmoo/source/repos/EcoCar-Telemetry-Interface/modules/CMakeFiles/telemetry-interface.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/mrmoo/source/repos/EcoCar-Telemetry-Interface/modules/CMakeFiles/telemetry-interface.dir/Release/cmake_pch.hxx</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/mrmoo/source/repos/EcoCar-Telemetry-Interface/modules/telemetry-interface.dir/Release/cmake_pch.pch</PrecompiledHeaderOutputFile>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/Users/mrmoo/source/repos/EcoCar-Telemetry-Interface/modules/CMakeFiles/telemetry-interface.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/Users/mrmoo/source/repos/EcoCar-Telemetry-Interface/modules/CMakeFiles/telemetry-interface.dir/MinSizeRel/cmake_pch.hxx</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/Users/mrmoo/source/repos/EcoCar-Telemetry-Interface/modules/telemetry-interface.dir/MinSizeRel/cmake_pch.pch</PrecompiledHeaderOutputFile>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/Users/mrmoo/source/repos/EcoCar-Telemetry-Interface/modules/CMakeFiles/telemetry-interface.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/Users/mrmoo/source/repos/EcoCar-Telemetry-Interface/modules/CMakeFiles/telemetry-interface.dir/RelWithDebInfo/cmake_pch.hxx</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/Users/mrmoo/source/repos/EcoCar-Telemetry-Interface/modules/telemetry-interface.dir/RelWithDebInfo/cmake_pch.pch</PrecompiledHeaderOutputFile>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</ScanSourceforModuleDependencies>
+    </ClCompile>
+    <ClCompile Include="C:\Users\mrmoo\source\repos\EcoCar-Telemetry-Interface\src\InterfaceLayer.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/mrmoo/source/repos/EcoCar-Telemetry-Interface/modules/CMakeFiles/telemetry-interface.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/mrmoo/source/repos/EcoCar-Telemetry-Interface/modules/CMakeFiles/telemetry-interface.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/Users/mrmoo/source/repos/EcoCar-Telemetry-Interface/modules/CMakeFiles/telemetry-interface.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/Users/mrmoo/source/repos/EcoCar-Telemetry-Interface/modules/CMakeFiles/telemetry-interface.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</ScanSourceforModuleDependencies>
+    </ClCompile>
+    <ClCompile Include="C:\Users\mrmoo\source\repos\EcoCar-Telemetry-Interface\src\main.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/mrmoo/source/repos/EcoCar-Telemetry-Interface/modules/CMakeFiles/telemetry-interface.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/mrmoo/source/repos/EcoCar-Telemetry-Interface/modules/CMakeFiles/telemetry-interface.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/Users/mrmoo/source/repos/EcoCar-Telemetry-Interface/modules/CMakeFiles/telemetry-interface.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/Users/mrmoo/source/repos/EcoCar-Telemetry-Interface/modules/CMakeFiles/telemetry-interface.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</ScanSourceforModuleDependencies>
+    </ClCompile>
+    <ClInclude Include="C:\Users\mrmoo\source\repos\EcoCar-Telemetry-Interface\src\InterfaceLayer.h" />
+    <ClInclude Include="C:\Users\mrmoo\source\repos\EcoCar-Telemetry-Interface\modules\CMakeFiles\telemetry-interface.dir\Debug\cmake_pch.hxx" />
+    <ClInclude Include="C:\Users\mrmoo\source\repos\EcoCar-Telemetry-Interface\modules\CMakeFiles\telemetry-interface.dir\Release\cmake_pch.hxx" />
+    <ClInclude Include="C:\Users\mrmoo\source\repos\EcoCar-Telemetry-Interface\modules\CMakeFiles\telemetry-interface.dir\MinSizeRel\cmake_pch.hxx" />
+    <ClInclude Include="C:\Users\mrmoo\source\repos\EcoCar-Telemetry-Interface\modules\CMakeFiles\telemetry-interface.dir\RelWithDebInfo\cmake_pch.hxx" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:\Users\mrmoo\source\repos\EcoCar-Telemetry-Interface\modules\ZERO_CHECK.vcxproj">
+      <Project>{A489EE3C-0E3A-3B33-A149-183B21D08F51}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\mrmoo\source\repos\EcoCar-Telemetry-Interface\modules\modules\AEngine\AEngine.vcxproj">
+      <Project>{C38E89D2-4EB2-3F35-AA79-37E359EFDF69}</Project>
+      <Name>AEngine</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\mrmoo\source\repos\EcoCar-Telemetry-Interface\modules\modules\AEngine\AEngine\vendor\GLAD\GLAD.vcxproj">
+      <Project>{BEC78C18-AC84-36B8-AF29-001D079B7020}</Project>
+      <Name>GLAD</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\mrmoo\source\repos\EcoCar-Telemetry-Interface\modules\modules\AEngine\AEngine\vendor\GLFW\src\GLFW.vcxproj">
+      <Project>{E7C1CAB2-4C43-349B-A100-B75AB605034C}</Project>
+      <Name>GLFW</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\mrmoo\source\repos\EcoCar-Telemetry-Interface\modules\modules\AEngine\AEngine\vendor\IMGUI\IMGUI.vcxproj">
+      <Project>{97E83F09-41EA-3663-B300-AC9870AC10EF}</Project>
+      <Name>IMGUI</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\mrmoo\source\repos\EcoCar-Telemetry-Interface\modules\IMGUI-KNOBS.vcxproj">
+      <Project>{F79EFA28-8147-3A2F-9431-07BAA3715D39}</Project>
+      <Name>IMGUI-KNOBS</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\mrmoo\source\repos\EcoCar-Telemetry-Interface\modules\modules\AEngine\AEngine\vendor\IMPLOT\IMPLOT.vcxproj">
+      <Project>{D0CDEC81-8D2C-3B5C-A6FE-16AAE098B104}</Project>
+      <Name>IMPLOT</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

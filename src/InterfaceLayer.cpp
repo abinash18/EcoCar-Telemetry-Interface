@@ -119,7 +119,7 @@ struct RollingBuffer
 	}
 };
 
-constexpr ImVec2 size(400, 400);
+constexpr ImVec2 size(500,500);
 
 template <typename T>
 inline T RandomRange(T min, T max)
@@ -146,11 +146,26 @@ void InterfaceLayer::render()
 	ImGui::BeginChild("ChildR1", size, true);
 	static float value = 0;
 
-	if (ImGuiKnobs::Knob("Speed", &value, -6.0f, 6.0f, 0.1f, "%.1fdB", ImGuiKnobVariant_Wiper, 150))
+	static float value1 = 0.0f;
+	if (ImGuiKnobs::Knob("Voltage", &value1, -6.0f, 6.0f, 0.1f, "%.1fVolts",  ImGuiKnobVariant_Wiper, 150))
 	{
-		// value was changed
+		// Handle value1 change
 	}
+	ImGui::SameLine();
+	static float value2 = 0.0f;
+	if (ImGuiKnobs::Knob("Current", &value2, -6.0f, 6.0f, 0.1f, "%.1fAmp", ImGuiKnobVariant_Wiper, 150))
+	{
+		// Handle value2 change
+	}
+	ImGui::SameLine();
+	static float value3 = 0.0f;
+	if (ImGuiKnobs::Knob("Speed", &value3, -6.0f, 6.0f, 0.1f, "%.1fM/s", ImGuiKnobVariant_Wiper,  150))
+	{
+		// Handle value3 change
+	}
+
 	ImGui::EndChild();
+
 	//ImGui::SameLine();
 	ImGui::BeginChild("ChildR2", size, true);
 	static float arr[] = { 0.6f, 0.1f, 1.0f, 0.5f, 0.92f, 0.1f, 0.2f };

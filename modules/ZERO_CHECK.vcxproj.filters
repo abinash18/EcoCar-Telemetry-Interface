@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\mrmoo\source\repos\EcoCar-Telemetry-Interface\modules\CMakeFiles\e1794fff84826063cbd5b3a1133da0c3\generate.stamp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{1BD150BB-DCD7-3C49-BC1F-C8F8D53F7660}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

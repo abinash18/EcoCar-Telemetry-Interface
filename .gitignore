@@ -39,3 +39,7 @@ out/
 
 
 .vs/
+
+.vcxproj
+.filters
+

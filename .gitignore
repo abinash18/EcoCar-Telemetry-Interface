@@ -42,4 +42,6 @@ out/
 
 .vcxproj
 .filters
-
+.cmake
+AEngine/CMakeFiles
+C:\Users\mrmoo\Source\Repos\EcoCar-Telemetry-Interface\modules\CMakeFiles

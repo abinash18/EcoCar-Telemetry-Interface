@@ -6,6 +6,7 @@
 #include "GLFW/include/GLFW/glfw3.h"
 #include "imgui_impl_glfw.h"
 #include "imgui_impl_opengl3.h"
+#include "NeedleNob.h" 
 
 //using namespace ImGui;
 
@@ -147,19 +148,24 @@ void InterfaceLayer::render()
 	static float value = 0;
 
 	static float value1 = 0.0f;
-	if (ImGuiKnobs::Knob("Voltage", &value1, -6.0f, 6.0f, 0.1f, "%.1fVolts",  ImGuiKnobVariant_Wiper, 150))
+	if (ImGuiKnobs::NeedleKnob("Voltage", &value1, -6.0f, 6.0f, 0.1f, "%.1fVolts",  ImGuiKnobVariant_Wiper, 150))
 	{
 		// Handle value1 change
 	}
 	ImGui::SameLine();
 	static float value2 = 0.0f;
-	if (ImGuiKnobs::Knob("Current", &value2, -6.0f, 6.0f, 0.1f, "%.1fAmp", ImGuiKnobVariant_Wiper, 150))
+	if (ImGuiKnobs::NeedleKnob("Current", &value2, -6.0f, 6.0f, 0.1f, "%.1fAmp", ImGuiKnobVariant_Wiper, 150))
 	{
 		// Handle value2 change
 	}
 	ImGui::SameLine();
 	static float value3 = 0.0f;
-	if (ImGuiKnobs::Knob("Speed", &value3, -6.0f, 6.0f, 0.1f, "%.1fM/s", ImGuiKnobVariant_Wiper,  150))
+	if (ImGuiKnobs::NeedleKnob("Speed", &value3, -6.0f, 6.0f, 0.1f, "%.1fM/s", ImGuiKnobVariant_Wiper,  150))
+	{
+		// Handle value3 change
+	}
+	static float value4 = 0.0f;
+	if (ImGuiKnobs::NeedleKnob("Speed", &value4, -6.0f, 6.0f, 0.1f, "%.1fM/s", ImGuiKnobVariant_Wiper, 150))
 	{
 		// Handle value3 change
 	}

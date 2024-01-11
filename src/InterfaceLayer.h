@@ -7,6 +7,7 @@
 #include "AEngine/input/event/WindowEvent.h"
 #include "imgui.h"
 #include "IMPLOT/implot.h"
+#include "NeedleNob.h"
 
 class InterfaceLayer : public AEngine::Layer {
     public:

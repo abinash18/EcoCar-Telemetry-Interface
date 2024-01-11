@@ -36,12 +36,15 @@ build/
 imgui.ini
 
 out/
-
-
 .vs/
-
+.vscode/
+CMakeSettings.json
 .vcxproj
 .filters
 .cmake
 AEngine/CMakeFiles
-C:\Users\mrmoo\Source\Repos\EcoCar-Telemetry-Interface\modules\CMakeFiles
+
+CMakeFiles/
+modules/
+toolchain/
+modules/
